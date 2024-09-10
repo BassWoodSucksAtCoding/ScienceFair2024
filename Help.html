@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythBusters</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #87b3da;
+            margin-top: 0;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #F2E9E1; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-right: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .title-container {
+            font-family: 'Lato', sans-serif;
+            background-color:  #FF6F6F; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            font-style: italic;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .content-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            height: 450px;
+            width: 400px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        .image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            border: 10px solid #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px; /* Gap below the image */
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .image:hover img {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .text-container {
+            max-width: 700px;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+        }
+
+        .text-container .myth-1 {
+            font-size: 25px;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Gap between the image and text */
+            color: #6D6D6D;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 20px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .popup-content {
+            background-color: #f2e9e1b4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 700px;
+            height: 900px;
+            overflow: auto;
+            position: relative;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Gap between the image and text */
+            color: #535353;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 20px;
+        }
+
+        /* Custom scrollbar styles */
+        .popup-content::-webkit-scrollbar {
+            width: 0; /* Hide scrollbar */
+        }
+
+        .popup-content {
+            -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+            scrollbar-width: none; /* Hide scrollbar in Firefox */
+        }
+
+        .popup img {
+            width: 100%;
+            height: auto;
+            margin: 50px 0px 20px 0px;
+        }
+
+        .popup .popup-text {
+            font-size: 18px; /* Adjust font size as needed */
+            color: rgb(60, 60, 60); /* Different color for popup text */
+            line-height: 1.6;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box-container">
+            <div class="title-container">
+                “A coin dropped from the Empire State Building can kill”
+            </div>
+            <div class="content-container">
+                <div class="image-container" id="popupImage">
+                    <div class="image">
+                        <img src="empire.jpg" alt="">
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p class="myth-1">
+                        Imagine a coin dropped from the top of the Empire State Building, accelerating as it falls through the air. With each second, it picks up speed, reaching a point where it could potentially become a dangerous projectile. The sheer height and the powerful force of gravity create an intriguing scenario: could something as small as a coin, under such conditions, pose a serious threat? The story behind this urban legend is as captivating as it is mysterious. To uncover the truth and explore the science behind this fascinating myth, click the image next to the text.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup window -->
+    <div class="popup" id="popupWindow">
+        <div class="popup-content">
+            <span class="popup-close" id="closePopup">&times;</span>
+            <p class="title-container">
+              “A coin dropped from the Empire State Building can kill”
+            </p>
+            <img src="empire.jpg" alt="">
+            <p class="popup-text">
+                <p>When construction of the Empire State Building in New York City ended in 1931, a popular legend emerged. If a visitor to the top floor, 381 m above the ground, dropped a coin, it would reach the speed of a bullet before hitting the ground &#8722; which could kill an unfortunate pedestrian. But simple physics comes to the rescue of New Yorkers.</p>
+
+                <p>A coin is flat and circular, and the shape means that air resistance will quickly equal gravity. When it does, the coin cannot fall any faster, and after only 15 m, the coin will reach its top speed of about 40 km/h. At this speed, the coin will still hurt and maybe even injure if it hits, but it&rsquo;s unlikely to kill. Also, this speed is difficult to calculate and depends on the weather and the coin&rsquo;s rotation as it falls through the air. According to some estimates, a coin would be able to reach a speed of 100 km/h, but still be harmless.</p>
+                
+                <p>Bullets are shot off at a speed of more than 1,000 km/h. Several people have tested the myth in practice. One of them is physicist Louis Bloomfield from the University of Virginia, who sent coins up and down wind tunnels with helium balloons to model the fall from a skyscraper and subsequently had the coins hit his forehead. The impact was felt, but he says it didn&rsquo;t even hurt.</p>
+                
+                <p>The Discovery Channel MythBusters TV series tested the myth in 2003. Coins were shot off at a speed of more than 100 km/h, and it was concluded that a falling coin can probably only cause harm, if it hits you in the eye. However, nails and pens should not be thrown from tall buildings, as they can cut through the air like arrows. While air molecules are constantly hitting a coin on its way down, they will glance off a pointed, thin object. A pen can reach a speed of more than 300 km/h, and when it strikes, it deposits its energy in a very small point &#8722; small enough to pierce a skull.</p>
+                
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Get references to elements
+        const image = document.getElementById('popupImage');
+        const popupWindow = document.getElementById('popupWindow');
+        const closePopup = document.getElementById('closePopup');
+
+        // Show the popup when the image is clicked
+        image.addEventListener('click', () => {
+            popupWindow.style.display = 'flex';
+        });
+
+        // Hide the popup when the close button is clicked
+        closePopup.addEventListener('click', () => {
+            popupWindow.style.display = 'none';
+        });
+
+        // Hide the popup when clicking outside of the popup content
+        window.addEventListener('click', (event) => {
+            if (event.target === popupWindow) {
+                popupWindow.style.display = 'none';
+            }
+        });
+    </script>
+
+    <a href="Help - Copy.html"></a>
+</body>
+</html>
