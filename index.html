@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythBusters</title>
+    <style>
+        /* Your existing styles */
+        /* Add any additional styles as needed */
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #ffe0b8;
+            margin-top: 0;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #cae6ff;
+            margin-top: 0;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #fff4cc;
+            margin-top: 0;
+        }
+
+        .container4 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #ffd8d6;
+            margin-top: 0;
+        }
+
+        .container5 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #adadad;
+            margin-top: 0;
+        }
+
+        .container6 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #e4d1ff;
+            margin-top: 0;
+        }
+
+        .container7 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #fadcd7;
+            margin-top: 0;
+        }
+
+        .container8 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #ffe3c1;
+            margin-top: 0;
+        }
+
+        .container9 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #ffb9cb;
+            margin-top: 0;
+        }
+
+        .container10 {
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 30px 10px;
+            background-color: #ff8989;
+            margin-top: 0;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #FDF9F3; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-right: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container2 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #E0E0E0; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-left: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container3 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #fff4e6; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-right: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container4 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #f2e9e2; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-left: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container5 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #f2e9e2; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-right: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container6 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #F7F2E7; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-left: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container7 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #DCDCDC; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-right: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container8 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #F4F1E8; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-left: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container9 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #F8F4F1; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-right: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container10 {
+            display: flex;
+            flex-direction: column;
+            width: 1200px; /* Adjust the width as needed */
+            background-color: #f8e6fa; /* Light orange color */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-left: 500px; /* Shift the box to the right */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.164);
+            transition: box-shadow 0.13s ease;
+        }
+
+        .box-container:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .box-container2:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .box-container3:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container4:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container5:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container6:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container7:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container8:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container9:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container10:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .title-container {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #fa9964; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #B0C4DE; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #c8b7a6; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container4 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #FF6F6F; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container5 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #6D6E71; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container6 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #A4C3D4; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container7 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #E4BFA4; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container8 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #C4A69F; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container9 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #F28D8D; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+        .title-container10 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:  #F7A3A3; /* Dark orange color */
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: -20px -20px -20px -20px; /* Adjust to fit inside the box */
+        }
+
+
+        .content-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            height: 450px;
+            width: 400px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        .image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            border: 10px solid #ffffffab;
+            border-radius: 15px;
+            border-width: 0px;
+            overflow: hidden;
+            margin-bottom: 20px; /* Gap below the image */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            
+        }
+
+        .image:hover img {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .text-container {
+            max-width: 700px;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-right: 20px;
+        }
+
+        .text-container .myth-1 {
+            font-size: 25px;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Gap between the image and text */
+            color: #6D6D6D;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 20px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure the overlay is on top */
+        }
+
+        .popup-content {
+            background-color: #f2e9e1;
+            padding: 20px;
+            border-radius: 10px;
+            width: 700px;
+            height: 900px;
+            overflow: auto;
+            position: relative;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #535353;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Custom scrollbar styles */
+        .popup-content::-webkit-scrollbar {
+            width: 0; /* Hide scrollbar */
+        }
+
+        .popup-content {
+            -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+            scrollbar-width: none; /* Hide scrollbar in Firefox */
+        }
+
+        .popup img {
+            width: 100%;
+            height: auto;
+            margin: 50px 0px 20px 0px;
+            border-radius: 15px;
+            border-width: 0px;
+        }
+
+        .popup .popup-text {
+            font-size: 18px; /* Adjust font size as needed */
+            color: rgb(60, 60, 60); /* Different color for popup text */
+            line-height: 1.6;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Myth 1 -->
+    <div class="container">
+        <div class="box-container" id="myth1">
+            <div class="title-container">Myth 1: Carrots help to improve your vision</div>
+            <div class="content-container">
+                <div class="image-container" data-popup="popupWindow1">
+                    <div class="image">
+                        <img src="carrot.webp" alt="">
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p class="myth-1">
+                        Think you’ve heard it all about carrots and their magical powers for your eyes? You might be surprised by the real story behind this orange veggie. Carrots have long been touted as a superfood that can improve your vision, but is there any truth to this claim? With so many health tips and myths circulating, it’s easy to take some information at face value. Dive into the fascinating history and science behind the carrot vision myth to see what’s really behind the crunchy legend. Click the image beside the text to uncover the reality and find out if this popular belief holds any water or if it’s just a well-cooked tale!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 2 -->
+    <div class="container2">
+        <div class="box-container2" id="myth2">
+            <div class="title-container2">Myth 2: Lightning Never Strikes the Same Place Twice</div>
+            <div class="content-container">
+                <div class="text-container">
+                    <p class="myth-1">
+                      Ever heard that lightning can&#39;t strike the same place twice? The dramatic notion that lightning will never strike the same place twice often serves as a reassuring myth, suggesting that once a spot has been hit, it&#39;s safe from future strikes. This belief might offer comfort during stormy weather, but is it scientifically accurate? Explore the electrifying reality behind lightning strikes by clicking the image, and learn why this myth is more about folklore than facts. Prepare to be amazed by what actually happens during a lightning storm! 
+                    </p>
+                </div>
+                <div class="image-container" data-popup="popupWindow2">
+                    <div class="image">
+                        <img src="lightning.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 3 -->
+    <div class="container3">
+        <div class="box-container3" id="myth3">
+            <div class="title-container3">Myth 3: Eating Sugar Causes Hyperactivity in Children</div>
+            <div class="content-container">
+              <div class="image-container" data-popup="popupWindow3">
+                <div class="image">
+                    <img src="sugar.webp" alt="">
+                </div>
+            </div>
+                <div class="text-container">
+                    <p class="myth-1">
+                      Imagine a world where eating sugar instantly turns children into hyperactive bundles of energy. This widespread belief suggests that sugar directly causes behavioral changes, leading to increased activity levels and restlessness. Many parents and caregivers have long thought that cutting down on sugar could help manage hyperactivity. Click the image to explore the origins of this myth and discover what science really says about sugar and its effects on behavior. Uncover the truth behind this common misconception and learn how it became such a persistent idea.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 4 -->
+    <div class="container4">
+        <div class="box-container4" id="myth4">
+            <div class="title-container4">Myth 4: Humans Only Use 10% of Their Brains</div>
+            <div class="content-container">
+                <div class="text-container">
+                    <p class="myth-1">
+                    Imagine a world where unlocking your brain&#39;s full potential could lead to extraordinary abilities, from enhanced intelligence to superhuman skills. The intriguing myth that we only use 10% of our brains fuels this tantalizing fantasy and suggests that a vast reservoir of untapped power is just waiting to be discovered. But is there any scientific basis for this captivating claim? Click the image to delve into the fascinating truth about brain function and find out how much of your brain is actually in use! 
+                    </p>
+                </div>
+                <div class="image-container" data-popup="popupWindow4">
+                    <div class="image">
+                        <img src="brain.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 5 -->
+    <div class="container5">
+        <div class="box-container3" id="myth5">
+            <div class="title-container5">Myth 5: Bat's are completely blind</div>
+            <div class="content-container">
+              <div class="image-container" data-popup="popupWindow5">
+                <div class="image">
+                    <img src="bat.jpg" alt="">
+                </div>
+            </div>
+                <div class="text-container">
+                    <p class="myth-1">
+                        Have you ever been startled by a bat and wondered how these nocturnal creatures navigate the darkness? The notion that bats are blind might sound believable, especially given their association with echolocation and nighttime activity. But what if I told you this popular belief is more myth than reality? Click to uncover the truth behind bat vision and discover how these fascinating animals perceive their world in ways you might never have imagined!
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 6 -->
+    <div class="container6">
+        <div class="box-container6" id="myth6">
+            <div class="title-container6">Myth 6: We Only Have Five Senses</div>
+            <div class="content-container">
+                <div class="text-container">
+                    <p class="myth-1">
+                        Ever been taught that humans have just five senses—sight, hearing, taste, touch, and smell? This simplified version of human perception might seem straightforward, but the reality is far more intricate. Prepare to expand your understanding of how we experience the world around us. Click to explore the fascinating range of senses beyond the traditional five, and discover how these additional senses play a crucial role in our daily lives!
+                    </p>
+                </div>
+                <div class="image-container" data-popup="popupWindow6">
+                    <div class="image">
+                        <img src="sense.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 7 -->
+    <div class="container7">
+        <div class="box-container7" id="myth7">
+            <div class="title-container7">Myth 7: You Can Sweat Out Toxins</div>
+            <div class="content-container">
+              <div class="image-container" data-popup="popupWindow7">
+                <div class="image">
+                    <img src="sweat.webp" alt="">
+                </div>
+            </div>
+                <div class="text-container">
+                    <p class="myth-1">
+                        Have you ever been told that sweating is a great way to rid your body of toxins? This popular detox myth has gained traction in health and wellness circles, often promoted by fitness and detox trends. But is there any scientific basis for the idea that sweating helps cleanse your body of harmful substances? Click to uncover the truth about how your body handles toxins and whether sweating truly plays a role in detoxification!
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 8 -->
+    <div class="container8">
+        <div class="box-container8" id="myth8">
+            <div class="title-container8">Myth 8: The Great Wall of China Is Visible from Space</div>
+            <div class="content-container">
+                <div class="text-container">
+                    <p class="myth-1">
+                        Is the Great Wall of China visible from space with just the naked eye? This iconic belief has fascinated people for years, painting a picture of an awe-inspiring structure so grand that it can be seen from orbit. But is there any truth to this widely held notion? Click to delve into the reality of what can actually be seen from space and discover the fascinating details about the Great Wall and its visibility from beyond our atmosphere!
+                    </p>
+                </div>
+                <div class="image-container" data-popup="popupWindow8">
+                    <div class="image">
+                        <img src="wall.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 9 -->
+    <div class="container9">
+        <div class="box-container9" id="myth9">
+            <div class="title-container9">Myth 9: The Taste Buds Are Specifically Located on Different Areas of the Tongue</div>
+            <div class="content-container">
+                <div class="text-container">
+                    <p class="myth-1">
+                        Ever been told that different regions of your tongue are responsible for specific tastes, such as sweet, sour, salty, and bitter? This traditional belief paints a picture of a highly specialized tongue, but is it accurate? Click to explore the fascinating truth about how taste actually works and discover why this classic notion is more myth than fact!
+                    </p>
+                </div>
+                <div class="image-container" data-popup="popupWindow9">
+                    <div class="image">
+                        <img src="tongue.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Myth 10 -->
+    <div class="container10">
+        <div class="box-container10" id="myth10">
+            <div class="title-container10">Myth 10: Swallowed Gum Stays in Your Stomach for Seven Years</div>
+            <div class="content-container">
+                <div class="text-container">
+                    <p class="myth-1">
+                        Have you ever been told that if you swallow gum, it will remain in your stomach for seven years? This myth has circulated for years and has become a common concern among parents and children alike. Click to uncover the truth about what really happens to swallowed gum and why this myth has endured despite scientific evidence to the contrary!
+                    </p>
+                </div>
+                <div class="image-container" data-popup="popupWindow10">
+                    <div class="image">
+                        <img src="gum.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup windows -->
+    <div class="popup" id="popupWindow1">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow1">&times;</span>
+            <p class="title-container">Carrots help to improve your vision</p>
+            <img src="carrot2.webp" alt="">
+            <p class="popup-text">
+                <b>The Myth:</b> The belief that carrots are a miracle food for improving eyesight dates back to World War II. British intelligence spread the story that their pilots’ excellent night vision was due to a diet rich in carrots. This clever piece of propaganda was designed to mislead the enemy about the true nature of the pilots' advanced radar technology. As a result, the idea that carrots could significantly enhance vision took root in the public’s mind, transforming a wartime ruse into a widely accepted fact. <br> <br>
+
+                <b>The Truth:</b> While carrots are indeed good for your health due to their high vitamin A content, they don’t actually improve your vision beyond normal levels. Vitamin A is essential for maintaining healthy eyes and preventing night blindness, but once your body gets enough of it, additional carrots won’t enhance your vision further. The myth of carrots being a superfood for eyesight is largely a result of wartime propaganda, not scientific evidence. For maintaining eye health, a balanced diet with various nutrients and regular eye care are more effective strategies.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow2">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow2">&times;</span>
+            <p class="title-container2">Lightning Never Strikes the Same Place Twice</p>
+            <img src="lightning.webp" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> Many people believe that lightning cannot strike the same place more than once. This notion is often used to suggest that certain places or people are "safe" from lightning after being struck once. <br> <br>
+
+              <b>The Truth:</b> In reality, lightning can and does strike the same place multiple times. For instance, tall structures like skyscrapers, radio towers, and even trees are struck repeatedly due to their height and the frequency of lightning strikes in their area. The Empire State Building, for example, is struck by lightning around 20-25 times a year. This myth likely persists because it offers a false sense of security and an oversimplified view of natural phenomena.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow3">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow3">&times;</span>
+            <p class="title-container3">Eating Sugar Causes Hyperactivity in Children</p>
+            <img src="sugar.webp" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The myth that sugar consumption directly causes hyperactivity in children has been prevalent for decades, often cited by parents and educators. This belief was popularized by early studies and anecdotal evidence suggesting a link between sugary diets and increased activity levels or behavioral issues. It became a common explanation for children’s energetic behavior, leading to widespread avoidance of sugar in hopes of curbing hyperactivity. <br> <br>
+
+              <b>The Truth:</b> Scientific research has consistently failed to find a direct link between sugar consumption and hyperactivity in children. Numerous studies have investigated this relationship and found no significant evidence that sugar has a direct effect on behavior. The perception of increased hyperactivity may be influenced by situational factors, such as the excitement of social events where sugary treats are often consumed. Psychological studies suggest that the expectation of sugar causing hyperactivity can lead to perceived behavioral changes due to placebo effects.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow4">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow4">&times;</span>
+            <p class="title-container4">Humans Only Use 10% of Their Brain</p>
+            <img src="brain.jpg" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> It&#39;s often said that humans use only 10% of their brains, a claim that suggests a vast reservoir of untapped potential just waiting to be unlocked. This myth has permeated popular culture, inspiring self-help books and movies that imply we could dramatically enhance our abilities if we could just access the remaining 90%. <br> <br>
+
+              <b>The Truth:</b> Neuroscientists have debunked this myth with extensive research. Brain imaging technologies, such as fMRI and PET scans, show that nearly every part of the brain is active at some point over the course of a day. Different tasks and activities activate different regions, but no part of the brain is entirely inactive or unused. The idea of using only 10% of our brains is a misunderstanding of how brain activity works and likely originates from early neuroscientific research or misinterpretations. In reality, the brain is a highly efficient organ, and its various regions work together to handle a range of complex functions. So, rather than having untapped "brainpower," we are already utilizing our brains to their full extent.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow5">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow5">&times;</span>
+            <p class="title-container5">Bats are completely blind</p>
+            <img src="bat.jpg" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The myth that bats are blind likely originated from a combination of misconceptions and early misunderstandings about these creatures. Bats are known for their use of echolocation, which may have led people to believe that they rely solely on sound and are therefore blind. This idea was further perpetuated by the fact that many bats are nocturnal and are rarely seen during the day. <br> <br>
+
+              <b>The Truth:</b> Bats are not blind. In fact, many species of bats have functional eyesight that is adapted to their nocturnal lifestyle. While echolocation is a crucial tool for navigation and hunting, particularly in species that feed on insects, bats also have varying degrees of vision. Their eyesight is adapted to low-light conditions, enabling them to see in the dark. So, while bats rely heavily on echolocation, they do not lack vision and use both their sight and hearing to navigate their environment.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow6">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow6">&times;</span>
+            <p class="title-container6">We only have 5 senses</p>
+            <img src="sense.jpg" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The concept of five senses—sight, hearing, taste, touch, and smell—stems from ancient philosophical and scientific ideas. This classification dates back to Aristotle, who proposed these five primary senses based on observable human experiences. For centuries, this framework has been widely accepted and taught, creating a simplified view of sensory perception that doesn’t capture the full complexity of how we interact with the world. <br> <br>
+    
+              <b>The Truth:</b> In reality, humans possess a far more nuanced sensory system. Beyond the classic five senses, we have additional senses that are crucial for everyday functioning. These include:<br> <br>
+              
+              <b>Proprioception:</b> The sense of body position and movement, which helps us understand where our limbs are without looking at them. <br> 
+              <b>Vestibular Sense:</b> This sense helps with balance and spatial orientation, allowing us to maintain equilibrium and coordinate movement. <br> 
+              <b>Thermoception:</b> The ability to sense temperature changes, helping us detect heat and cold. <br> 
+              <b>Nociception:</b> The sense of pain, which alerts us to potential harm or injury. <br> <br> 
+    
+              These additional senses work together with the traditional five to provide a comprehensive understanding of our environment and bodily condition. This broader perspective on sensory perception underscores the complexity and adaptability of human experience, revealing that our interaction with the world is far richer than a mere five senses.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow7">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow7">&times;</span>
+            <p class="title-container7">You can sweat out toxins</p>
+            <img src="sweat.webp" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The belief that sweating can effectively remove toxins from the body has its roots in the idea that the act of sweating is a form of natural detoxification. This notion was popularized by various wellness fads and holistic health claims, which suggested that sweating out toxins could improve overall health and well-being. The idea often comes from the misunderstanding that toxins are expelled through sweat, leading many to believe that the more you sweat, the more toxins you eliminate. <br> <br>
+
+              <b>The Truth:</b> In reality, sweating&#39;s primary function is to regulate body temperature through the evaporation of sweat from the skin. While it's true that sweat contains trace amounts of various substances, including salts and some metabolic byproducts, the primary organs responsible for detoxification are the liver and kidneys. These organs work continuously to filter and remove toxins from the bloodstream and excrete them through urine and feces, not sweat. Sweating does not significantly affect toxin levels in the body. Engaging in regular exercise and maintaining a healthy diet are more effective ways to support your body&#39;s natural detoxification processes.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow8">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow8">&times;</span>
+            <p class="title-container8">The Great Wall of China Is Visible from Space</p>
+            <img src="wall.jpg" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The myth that the Great Wall of China is visible from space with the naked eye likely originates from a mix of national pride and historical exaggeration. This belief was popularized over time through various sources and public accounts that sought to emphasize the wall's monumental scale. The idea became entrenched in popular culture, suggesting that such a massive structure would be easily visible from orbit, highlighting its grandeur and the remarkable achievements of its builders. <br> <br>
+
+              <b>The Truth:</b> In reality, the Great Wall of China is not easily visible from space with the naked eye. While the wall is an impressive feat of engineering, its color and width blend in with the surrounding natural terrain. Astronauts have reported that it is challenging to see the wall without the aid of telescopic lenses or specific imaging equipment. The visibility of objects from space depends on various factors, including their size, color, and the conditions of the atmosphere, making the Great Wall less discernible from orbit than the myth suggests.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow9">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow9">&times;</span>
+            <p class="title-container9">The Taste Buds Are Specifically Located on Different Areas of the Tongue</p>
+            <img src="tongue2.webp" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The belief that different areas of the tongue are responsible for detecting specific tastes—sweet on the tip, salty on the sides, bitter at the back, and sour in between—originated from a misinterpretation of early taste research. This idea, often referred to as the "tongue map," became popular in the early 20th century based on outdated studies and has been perpetuated by textbooks and popular science. <br> <br>
+
+              <b>The Truth:</b> The so-called "tongue map" is a myth. Modern research using advanced techniques, such as functional magnetic resonance imaging (fMRI) and more precise taste studies, has shown that taste buds are distributed throughout the tongue and other areas of the mouth, including the palate and throat. Taste buds for all five basic tastes—sweet, sour, salty, bitter, and umami—can be found across the entire tongue. The sensation of taste is a complex process involving the combined activity of various taste receptors, which work together to give us a full range of flavor experiences.
+            </p>
+        </div>
+    </div>
+
+    <div class="popup" id="popupWindow10">
+        <div class="popup-content">
+            <span class="popup-close" data-popup="popupWindow10">&times;</span>
+            <p class="title-container10">The Taste Buds Are Specifically Located on Different Areas of the Tongue</p>
+            <img src="gum.webp" alt="">
+            <p class="popup-text">
+              <b>The Myth:</b> The belief that swallowed gum stays in your stomach for seven years is a widely circulated myth that likely originated from cautionary tales and misunderstandings about digestion. This exaggeration serves as a deterrent against swallowing gum, especially among children, and has been perpetuated by anecdotes and parental warnings.              <br> <br>
+
+              <b>The Truth:</b> Swallowed gum does not remain in the stomach for seven years. While it is true that gum is not easily broken down by the digestive system, it does not stay in the stomach. The body’s digestive process moves the gum through the gastrointestinal tract relatively quickly. According to research, swallowed gum passes through the digestive system and is excreted in a normal timeframe, usually within a few days. The gum base is resistant to digestive enzymes, but it does not cause any significant blockage or health issues. It is essentially treated like other indigestible substances and exits the body without lingering for years.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle showing and hiding popups
+        function setupPopups() {
+            // Get all image containers and popup close buttons
+            const imageContainers = document.querySelectorAll('.image-container');
+            const closeButtons = document.querySelectorAll('.popup-close');
+            const popups = document.querySelectorAll('.popup');
+
+            // Function to hide all popups
+            function hideAllPopups() {
+                popups.forEach(popup => popup.style.display = 'none');
+            }
+
+            // Add click event listeners to image containers
+            imageContainers.forEach(container => {
+                container.addEventListener('click', () => {
+                    const popupId = container.getAttribute('data-popup');
+                    hideAllPopups();
+                    document.getElementById(popupId).style.display = 'flex';
+                });
+            });
+
+            // Add click event listeners to close buttons
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const popupId = button.getAttribute('data-popup');
+                    document.getElementById(popupId).style.display = 'none';
+                });
+            });
+
+            // Add click event listener to window to hide popups on outside click
+            window.addEventListener('click', (event) => {
+                if (event.target.classList.contains('popup')) {
+                    event.target.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize popups
+        setupPopups();
+    </script>
+
+</body>
+</html>
